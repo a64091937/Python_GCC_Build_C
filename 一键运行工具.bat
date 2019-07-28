@@ -1,5 +1,5 @@
 @echo off
 cd output
-test.exe
+main.exe
 pause
 @echo on

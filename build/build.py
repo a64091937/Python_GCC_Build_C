@@ -12,10 +12,10 @@ import subprocess
 root_Path = os.path.join(os.getcwd(), "..")
 Path = [   #所有的需要编译的文件列表
     'src',
-    'src/func',
+    'src\\func',
 ]
 file_Paths = []               #每个文件的绝对路径
-object_file = 'output\\test'  #输出路径
+object_file = 'output\\main'  #输出路径
 gcc_Path = 'C:\\MinGW\\bin'   #gcc目录
 source_C_file = ''            #将所有.c文件的路径写到一起
 include_Path = ''             #将所有.h文件的路径写到一起
