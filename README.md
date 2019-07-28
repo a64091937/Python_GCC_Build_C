@@ -1,9 +1,9 @@
 # Python-GCC_Build_C
 A Build GCC Python Project
 项目目录结构：
-|——build    编译脚本目录
-|——output   输出可执行文件目录
-|——src      源代码目录
+>|——build    编译脚本目录
+>|——output   输出可执行文件目录
+>|——src      源代码目录
 你需要将你的所有需要编译的文件的目录添加到build.py文件的Path列表中,然后会自动扫描目录下的.c文件。
 
 在Windows平台需要的环境如下：Mingw（gcc），Python。
