@@ -18,6 +18,7 @@ file_Paths = []               #每个文件的绝对路径
 object_file = 'output\\test'  #输出路径
 gcc_Path = 'C:\\MinGW\\bin'   #gcc目录
 source_C_file = ''            #将所有.c文件的路径写到一起
+include_Path = ''             #将所有.h文件的路径写到一起
 
 for i in range(0,len(Path)):
     this_Path = [name for name in os.listdir(root_Path+'\\'+Path[i]) if name.endswith('.c')]  #当前目录里面的文件赋值给列表
@@ -30,10 +31,15 @@ for i in range(0,len(file_Paths)):
     source_C_file = source_C_file + ' ' + file_Paths[i]  #Path[0] + '\\' + 'test.c'
 #print(source_C_file)
 
+for i in range(0,len(Path)):
+    include_Path = include_Path + ' -I ' + root_Path + '\\' +Path[i]
+#print(include_Path)
+
 os.chdir(gcc_Path)
 
-build_cmd = gcc_Path + '\\' + "gcc.exe " + source_C_file + " -o " + root_Path + '\\' + object_file
-#print(build_cmd)
+build_cmd = gcc_Path + '\\' + "gcc.exe " + source_C_file + include_Path + " -o " + root_Path + '\\' + object_file
+#print('build_cmd',build_cmd)
+#print("\n")
 if 0 == subprocess.call(build_cmd, shell = True):
     print('Build successfully!')
 

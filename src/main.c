@@ -5,7 +5,7 @@
  Creation time:2019-7-28
  */
 #include <stdio.h>
-#include "func/func.h"
+#include "func.h"
 
 int main() 
 {
